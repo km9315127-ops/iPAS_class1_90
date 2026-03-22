@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="淨零碳規劃管理師能力鑑定學習指引（考科一）節能減碳技術實務｜手機版模擬試題" />
+  <title>淨零碳規劃管理師能力鑑定學習指引（考科一）節能減碳技術實務</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --sub: #4b5563;
+      --primary: #0f766e;
+      --primary-2: #14b8a6;
+      --border: #dbe3ee;
+      --shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; min-height: 100%; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", Arial, sans-serif;
+      background: linear-gradient(180deg, #eef8f7 0%, var(--bg) 180px);
+      color: var(--text);
+      -webkit-text-size-adjust: 100%;
+    }
+    .app { max-width: 860px; margin: 0 auto; padding: 14px 14px 120px; }
+    .hero, .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero {
+      padding: 18px;
+      margin-top: 12px;
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: #fff;
+      border: none;
+    }
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 1.18rem;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+    .hero p {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.96;
+      line-height: 1.65;
+    }
+    .producer {
+      margin-top: 10px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      opacity: 0.98;
+    }
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .chipbox {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+    }
+    .chipbox label, .chipbox select, .chipbox input {
+      display: block;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+    .chipbox label {
+      color: var(--sub);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    select, input[type="number"] {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      background: #fff;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .stat { padding: 12px; text-align: center; }
+    .stat .label { font-size: 0.8rem; color: var(--sub); margin-bottom: 6px; }
+    .stat .value { font-size: 1.1rem; font-weight: 800; color: var(--text); }
+    .card { padding: 16px; margin-bottom: 14px; }
+    .q-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #ecfeff;
+      color: #155e75;
+      border: 1px solid #bae6fd;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      max-width: 100%;
+      word-break: break-word;
+    }
+    .progress-wrap { margin-bottom: 12px; }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--sub);
+      margin-bottom: 8px;
+    }
+    .bar {
+      width: 100%;
+      height: 10px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar > div {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--primary-2));
+      transition: width 0.25s ease;
+    }
+    .question {
+      display: block;
+      visibility: visible;
+      color: #111827;
+      font-size: 1.05rem;
+      font-weight: 800;
+      line-height: 1.8;
+      margin: 10px 0 14px;
+      white-space: normal;
+      word-break: break-word;
+      min-height: 3.6em;
+    }
+    .hint {
+      display: block;
+      color: var(--sub);
+      font-size: 0.92rem;
+      margin-bottom: 10px;
+    }
+    .options { display: grid; gap: 10px; }
+    .option {
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 14px;
+      background: #fff;
+      cursor: pointer;
+      transition: 0.18s ease;
+      line-height: 1.7;
+      color: var(--text);
+      word-break: break-word;
+    }
+    .option input {
+      margin-right: 10px;
+      vertical-align: middle;
+      pointer-events: none;
+    }
+    .option.active { border-color: var(--primary-2); background: #ecfeff; }
+    .option.correct { border-color: #86efac; background: #f0fdf4; }
+    .option.wrong { border-color: #fca5a5; background: #fef2f2; }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    button {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 12px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      min-height: 48px;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-secondary { background: #e6fffb; color: #115e59; }
+    .btn-muted { background: #eef2f7; color: #334155; }
+    .result {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 14px;
+      line-height: 1.7;
+      font-size: 0.95rem;
+      display: none;
+      word-break: break-word;
+    }
+    .result.show { display: block; }
+    .result.ok { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; }
+    .result.ng { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    .footer-panel {
+      position: sticky;
+      bottom: 10px;
+      z-index: 10;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .summary { display: none; padding: 18px; }
+    .summary.show { display: block; }
+    .summary h2 { margin-top: 0; font-size: 1.3rem; }
+    .score-big { font-size: 2rem; font-weight: 900; color: var(--primary); margin: 8px 0 14px; }
+    .review-list { display: grid; gap: 10px; margin-top: 14px; }
+    .review-item {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      background: #fff;
+    }
+    .review-item.ok { border-left: 6px solid #22c55e; }
+    .review-item.ng { border-left: 6px solid #ef4444; }
+    .mini { font-size: 0.9rem; color: var(--sub); line-height: 1.6; }
+    .deploy-note {
+      margin-top: 12px;
+      color: var(--sub);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 560px) {
+      .app { padding: 12px 12px 120px; }
+      .toolbar, .stats, .actions, .footer-panel { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.02rem; }
+      .hero p { font-size: 0.9rem; }
+      .question { font-size: 0.98rem; line-height: 1.75; }
+      .card { padding: 14px; }
+      .badge { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <section class="hero">
+      <h1>淨零碳規劃管理師能力鑑定學習指引（考科一）節能減碳技術實務</h1>
+      <p>完整手機版模擬試題。支援單選、複選、章節篩選、隨機抽題、即時判分、交卷統計與錯題複習。</p>
+      <div class="producer">製作人：屏科大 楊忠原</div>
+    </section>
+
+    <section class="toolbar">
+      <div class="chipbox">
+        <label for="chapterFilter">章節篩選</label>
+        <select id="chapterFilter">
+          <option value="all">全部章節</option>
+          <option value="第一章｜組織節能減碳策略">第一章｜組織節能減碳策略</option>
+          <option value="第二章｜節能技術應用與能源管理">第二章｜節能技術應用與能源管理</option>
+          <option value="第三章｜再生能源與綠電導入">第三章｜再生能源與綠電導入</option>
+        </select>
+      </div>
+      <div class="chipbox">
+        <label for="questionCount">題數</label>
+        <input id="questionCount" type="number" min="5" max="90" value="20" />
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="card stat"><div class="label">總題庫</div><div class="value" id="totalBank">90</div></div>
+      <div class="card stat"><div class="label">本次題數</div><div class="value" id="sessionCount">20</div></div>
+      <div class="card stat"><div class="label">目前得分</div><div class="value" id="liveScore">0</div></div>
+      <div class="card stat"><div class="label">完成率</div><div class="value" id="liveProgress">0%</div></div>
+    </section>
+
+    <section class="card" id="quizCard">
+      <div class="q-top">
+        <div class="badge" id="chapterBadge">章節</div>
+        <div class="badge" id="questionIndex">第 1 題 / 20</div>
+      </div>
+
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>作答進度</span>
+          <span id="progressText">0 / 20</span>
+        </div>
+        <div class="bar"><div id="progressBar"></div></div>
+      </div>
+
+      <div class="hint" id="typeHint">題型：單選題</div>
+      <div class="question" id="questionText"></div>
+      <div class="options" id="optionsWrap"></div>
+      <div class="result" id="resultBox"></div>
+
+      <div class="actions">
+        <button class="btn-secondary" id="checkBtn">送出答案</button>
+        <button class="btn-muted" id="prevBtn">上一題</button>
+        <button class="btn-primary" id="nextBtn">下一題</button>
+      </div>
+    </section>
+
+    <section class="card summary" id="summaryCard">
+      <h2>本次模擬完成</h2>
+      <div class="score-big" id="finalScore">0 / 0</div>
+      <div class="mini" id="finalText"></div>
+      <div class="actions" style="margin-top:14px;">
+        <button class="btn-primary" id="restartBtn">重新抽題</button>
+        <button class="btn-secondary" id="reviewBtn">只看錯題</button>
+        <button class="btn-muted" id="backQuizBtn">回到測驗</button>
+      </div>
+      <div class="review-list" id="reviewList"></div>
+    </section>
+
+    <div class="footer-panel" id="footerPanel" style="display:none;">
+      <button class="btn-primary" id="generateBtn">重新抽題</button>
+      <button class="btn-muted" id="submitAllBtn">交卷看成績</button>
+    </div>
+
+    <div class="deploy-note">
+      發佈建議：將此單一 HTML 檔部署到 GitHub Pages、Netlify 或 Vercel。Facebook 可直接貼網址，Instagram 可放 bio 連結。
+    </div>
+  </div>
+
+  <script>
+    const questionBank = [
+      {id:1, chapter:'第一章｜組織節能減碳策略', type:'single', question:'下列哪一項最能反映「絕對減量目標」的管理特性？', options:['排放可隨產量改變','需搭配營收成長率','不論營運成長，排放量須下降','僅適用於製造業'], answer:2},
+      {id:2, chapter:'第一章｜組織節能減碳策略', type:'single', question:'依照減碳路徑設定的年度需減碳量，正確計算邏輯為何？', options:['基準年－目標年','BAU 排放－目標允許排放','總排放－範疇三排放','用電量 × 電價'], answer:1},
+      {id:3, chapter:'第一章｜組織節能減碳策略', type:'single', question:'某企業已完成減碳目標設定，但在實際路徑規劃時，發現每年需減碳量波動極大。最可能的根本原因為何？', options:['減碳目標設定採用絕對減量法','BAU 情境假設未考量營收成長','減碳目標年設定為 2050 年','目標參考 SBTi 方法學不符合產業趨勢'], answer:1},
+      {id:4, chapter:'第一章｜組織節能減碳策略', type:'single', question:'企業在設定減碳目標前，最重要的管理前提為何？', options:['選擇可行的減碳技術','完成碳盤查並建立管理基準','評估碳費價格','先設定減碳百分比'], answer:1},
+      {id:5, chapter:'第一章｜組織節能減碳策略', type:'single', question:'在路徑規劃中，「BAU 排放趨勢」的主要用途為何？', options:['作為減碳目標的替代方案','預測實際未來排放量','作為不減碳情境下的比較基準','用來計算碳費成本'], answer:2},
+      {id:6, chapter:'第一章｜組織節能減碳策略', type:'single', question:'下列哪一種情況，最可能顯示企業的減碳路徑設定過於寬鬆或容易？', options:['未採取減碳措施實際排放量略高於允許排放量','未採取減碳措施實際排放量長期低於允許排放量','BAU 排放與允許排放接近','不需要碳權也能自行調整排放報告抵扣碳費'], answer:1},
+      {id:7, chapter:'第一章｜組織節能減碳策略', type:'single', question:'某企業基準年（2023 年）排放量為 100,000 tCO2e，設定 2030 年減量 30% 的絕對減量目標。2030 年的目標允許排放量為何？', options:['70,000 tCO2e','73,000 tCO2e','30,000 tCO2e','130,000 tCO2e'], answer:0},
+      {id:8, chapter:'第一章｜組織節能減碳策略', type:'multi', question:'企業在設定減碳目標時，下列哪些原則有助於確保基準年與目標年的管理有效性？', options:['基準年應選擇資料完整且能代表正常營運狀態的年度','基準年應選擇排放量最低的年度，以提高減量成效','目標年需考量企業中長期轉型與投資時程','基準年與目標年的設定會影響年度減碳計算與可比較性'], answer:[0,2,3]},
+      {id:9, chapter:'第一章｜組織節能減碳策略', type:'multi', question:'某企業以「營收年成長 5%」作為 BAU 用電推估依據。在哪些情況下，此 BAU 假設最可能高估未來排放？', options:['製程自動化提升單位產出效率','電力排碳係數下降','增設新產線屬於高耗能製程','產品組合轉向高附加價值低用電'], answer:[0,1,3]},
+      {id:10, chapter:'第一章｜組織節能減碳策略', type:'multi', question:'跨國企業在不同地區用電結構差異大，下列哪些做法有助於提升減碳目標及路徑可管理性？', options:['依各主要營運地區分別建立 BAU 用電成長假設與排放係數','以集團總部總用電量作為 BAU 推估','對高用電占比或高成長地區，個別設定年度允許排放量','將所有地區套用同一電力排放係數'], answer:[0,2]},
+      {id:11, chapter:'第一章｜組織節能減碳策略', type:'single', question:'相較一般設備投資，減碳投資更需要風險評估的核心原因為何？', options:['投資金額較小','易受能源價格與政策影響','投資回收期較短','無法享有碳費減免'], answer:1},
+      {id:12, chapter:'第一章｜組織節能減碳策略', type:'single', question:'在資本預算有限下，若企業希望兼顧財務穩健與長期減碳目標，較符合財務決策模型的實務應用邏輯為何？', options:['依單位減碳成本最低者優先執行','優先選擇短期最大減碳量方案','透過財務模型比較不同方案在成本、效益與風險上的時間差異，進行組合配置','暫緩所有投資'], answer:2},
+      {id:13, chapter:'第一章｜組織節能減碳策略', type:'single', question:'同一節能措施每年可固定節省 10,000 MWh。若電價每年調升 6%，其年度節省電費金額趨勢最接近何者？', options:['逐年下降','逐年上升','大致不變','先上升後下降'], answer:1},
+      {id:14, chapter:'第一章｜組織節能減碳策略', type:'single', question:'某廠年用電 100,000 MWh、電價 3 元/kWh。節能後用電降 8%，但電價升到 3.2 元/kWh。只看年度電費變化最接近何者？', options:['年度電費上升約 560 萬','年度電費下降約 560 萬','年度電費上升約 480 萬','年度電費下降約 480 萬'], answer:1},
+      {id:15, chapter:'第一章｜組織節能減碳策略', type:'single', question:'某減碳專案以公司既定折現率評估後，NPV = +120 萬。下列判斷何者最符合財務意涵？', options:['代表專案比其他替代方案更好','代表專案在既定折現率下可帶來正的財務價值','代表專案回收年限一定符合要求','代表專案風險低，可不做敏感度分析'], answer:1},
+      {id:16, chapter:'第一章｜組織節能減碳策略', type:'single', question:'下列哪一描述最符合對減碳方案進行「敏感度分析」的核心精神？', options:['同時把電價、碳費、投資額一起改動，模擬最壞情境','以專家訪談方式評估風險高低','把所有不確定性用極值處理','在其他條件固定下，觀察某一關鍵假設變動對財務結果的影響'], answer:3},
+      {id:17, chapter:'第一章｜組織節能減碳策略', type:'single', question:'關於邊際減量成本（MAC），下列何者敘述錯誤？', options:['MAC 代表每減一噸 CO2e 的淨成本','MAC 可用於跨方案成本效率比較','MAC 為負值表示通常應優先投資','MAC 代表方案總投資金額'], answer:3},
+      {id:18, chapter:'第一章｜組織節能減碳策略', type:'multi', question:'若要用邊際減量成本曲線（MACC）支援「減排路徑組合」設計，可從 MACC 圖上得知哪些資訊？', options:['各方案可提供的減排量','各方案的導入時程與可用年度','各方案的每噸減排成本','各方案的優先採用排序'], answer:[0,2,3]},
+      {id:19, chapter:'第一章｜組織節能減碳策略', type:'multi', question:'減碳方案的財務模型通常需納入哪些關鍵要素？', options:['節能設備效率提升所帶來的節省電費','電價政策或燃料成本','與 BAU 相比的用電成本差異','節能設備的技術效率參數本身即可取代財務模型'], answer:[0,1,2]},
+      {id:20, chapter:'第一章｜組織節能減碳策略', type:'multi', question:'若一減碳方案 NPV > 0 且 IRR 高於公司資本成本，可合理推論哪些結論？', options:['在財務上具投資吸引力','回收年限一定短','具低風險','在既定假設下長期創造正值'], answer:[0,3]},
+      {id:21, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'下列何者屬於「公用設施」的範疇？', options:['成型機','混合槽','空壓系統','煉鋼爐'], answer:2},
+      {id:22, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'節能技術選用原則的核心目的為何？', options:['追求最新技術導入率','建立具邏輯性與可驗證性的技術評估基準','鼓勵企業自由採購設備','強化節能技術之商業推廣成效'], answer:1},
+      {id:23, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'下列何者最符合「系統性分析原則」的精神？', options:['僅針對單一馬達更換為高效率型','以整體空調系統能流與負載調節進行分析','依據投資回收期決定是否更換設備','僅依設備年限判斷汰換時機'], answer:1},
+      {id:24, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'依系統性分析原則，空調系統若欲進行節能改善，下列哪項作法最為合適？', options:['僅更換冷卻水塔風機','僅降低室內設定溫度','檢討冰水主機、泵浦、冷卻塔及風機整體運轉效率','關閉部分空調出風口'], answer:2},
+      {id:25, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'依效益與可行性原則，評估節能技術時應同時考量的要素為何？', options:['設備外觀設計','維保需求與營運風險','廠商品牌知名度','設備顏色與尺寸'], answer:1},
+      {id:26, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'技術相容性原則主要關注的重點為何？', options:['降低設備採購成本','確保新技術能與既有系統順利整合','提升品牌能見度','加快施工進度'], answer:1},
+      {id:27, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'標竿比較原則中提到的「基準值（Benchmark）」主要用途為何？', options:['作為設備保固條件','建立能效比較基準與改善目標','判斷施工安全標準','評估廠商信譽'], answer:1},
+      {id:28, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'下列何者為標竿比較的主要目的？', options:['取得政府補助','量化能效差距並確認改善優先順序','減少法規文件編製工作','增加投資金額'], answer:1},
+      {id:29, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'在安全與法規遵循原則中，下列哪一項屬於規劃階段應注意的檢核事項？', options:['供應商節能標章申請狀況','設備外觀設計與顏色','配電容量與系統冗餘','設備採購流程'], answer:2},
+      {id:30, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'關於節能技術選用時的「安全與法規遵循原則」，下列敘述何者最正確？', options:['著重於施工與運轉階段之安全檢核與法規符合性','主要針對製造商的設備登錄責任','僅適用於新建工程','僅消防系統相關設施需檢核'], answer:0},
+      {id:31, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ESCO 最大的特色是什麼？', options:['以政府補助支付投資費用','以節能效益支付投資費用','以企業投資額度決定節能幅度','以客戶預算全額支付改善費用'], answer:1},
+      {id:32, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ESCO 模式與傳統節能工程最大不同之一為何？', options:['不需進行量測與驗證','節能費用可分期攤還','完全不需要施工','不需簽訂任何合約'], answer:1},
+      {id:33, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'《節能績效保證合約》（ESPC）的主要目的為何？', options:['控管設備採購流程','確保節能績效落實','減少施工成本','增加政府補助金額'], answer:1},
+      {id:34, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ESCO 量測與驗證（M&V）常依循之國際標準為何？', options:['ISO 9001','ISO 50001','IPMVP','LEED'], answer:2},
+      {id:35, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ESCO 案中「改善前量測與驗證」的目的為何？', options:['建立改善後之能耗基線','估算未來設備維修費用','建立改善前能耗基線','驗收工程品質'], answer:2},
+      {id:36, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'IPMVP 選項 A 的特色為何？', options:['針對全部用電設備進行量測','依模擬進行節能計算','僅量測關鍵參數','必須量測所有參數'], answer:2},
+      {id:37, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'IPMVP 選項 D 的主要特徵為何？', options:['只能用於冰水主機','需要使用模擬模型進行比較','不需要任何實測數據','成本最低'], answer:1},
+      {id:38, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'若希望以整體廠房用電量進行節能績效分析，適用之 IPMVP 選項為何？', options:['選項 A','選項 B','選項 C','選項 D'], answer:2},
+      {id:39, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'以下何者最能代表 ESCO 模式的精神？', options:['前期設備投入由客戶全額負擔','以節能效益分攤或保證機制回收成本','不需進行工程施工','無須提供量測與驗證資料'], answer:1},
+      {id:40, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ESCO 模式常被政府推廣的原因之一是什麼？', options:['不需要任何專業能力即可執行','能產生可持續、可查驗之節能成果','專案全部由政府買單','適用於所有場域無需評估'], answer:1},
+      {id:41, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ISO 50001 導入流程中，何者屬於「能源盤查」的主要工作？', options:['撰寫管理審查報告','蒐集能源使用資料與辨識 SEU','編制預算','設計消防設備'], answer:1},
+      {id:42, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'SEU 辨識的主要考量因素為何？', options:['設備外觀','能耗占比與效率偏差','廠商品牌','使用壽命'], answer:1},
+      {id:43, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'EnPI 的設定原則應優先考慮什麼？', options:['指標需與 SEU 有關聯性','指標越多越好','以主觀經驗判定','以顏色分類指標'], answer:0},
+      {id:44, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'下列何者最適合作為空壓系統的 EnPI？', options:['每人平均用電 kWh/人','冷卻水溫度 °C','比功率 kW/(m³/min)','業績金額'], answer:2},
+      {id:45, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'基準線（EnB）建立時，何者最不恰當？', options:['採不具代表性之個別月份','採連續 12 個月歷史數據','建立迴歸模型','設定多段基準線'], answer:0},
+      {id:46, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'能源改善行動計畫（EEMs）需包含下列何者？', options:['設備購置合約','量化目標與時程','職員薪資','廠商品牌'], answer:1},
+      {id:47, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'在監測機制中，何者屬於標準實務？', options:['使用 BEMS 趨勢資料進行用能判讀','不需蒐集運轉數據','以人工亂測能耗','僅於設備故障時檢查'], answer:0},
+      {id:48, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'內部稽核的主要目的為何？', options:['判斷員工績效','檢查能源管理系統之符合性','汰換設備','制定工安規範'], answer:1},
+      {id:49, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'SEU 辨識後的下一個步驟通常為何？', options:['撰寫參考文獻','建立 EnPI 與 EnB','製作財務報表','進行消防演練'], answer:1},
+      {id:50, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'ISO 50001 的核心精神之一為何？', options:['以節能效益支付投資成本','持續改善能源績效','完全不需量測','僅適用工廠'], answer:1},
+      {id:51, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'目前節能相關前瞻技術的主要關注領域，不包含下列何者？', options:['基礎材料特性的突破','更大規模的數位基礎建設','系統管理技術','傳統單一設備的維修與更換'], answer:3},
+      {id:52, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'在人工智慧的能源管理應用中，「邊緣運算（Edge AI）」的主要優勢為何？', options:['可利用雲端算力進行長時間大數據分析','能免除網路傳輸延遲，實現毫秒等級的即時需量反應','主要用於建立全城市尺度幾何模型','可完全取代人類操作員'], answer:1},
+      {id:53, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'關於金屬有機框架（MOFs）在節能上的應用，下列何者正確？', options:['主要用於增強混凝土結構強度','利用其高比表面積與孔隙率，應用於除濕與吸附式製冷系統','導熱係數極高，適合做散熱鰭片','只能用於一般建材'], answer:1},
+      {id:54, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'關於聯合循環燃氣渦輪機組（CCGTs）的效益，下列敘述何者正確？', options:['熱效率約介於 33%~40%','僅使用燃氣輪機進行單一階段發電','每度電排放溫室氣體較燃煤電廠減少 50%~60%，且熱效率可達 60% 以上','啟動速度慢，不適合快速反應場合'], answer:2},
+      {id:55, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'高溫固態氧化物電解（SOEC）被列為重點關注領域的主要原因為何？', options:['可利用工業餘熱與蒸氣，提升電能轉換效率','是目前成本最低且最成熟的製氫方式','完全不需要使用電力即可產氫','主要使用廢液作為電解原料'], answer:0},
+      {id:56, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'「廢棄物／副產品整合的製氫技術」之核心概念為何？', options:['利用地質勘探尋找地下天然氫','使用碳系廢液等取代純水電解，同時達成廢液處理與低能耗製氫','將氫氣轉化為氮氣以利運輸','利用燃煤發電廢氣進行碳捕捉'], answer:1},
+      {id:57, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'關於氫氣的儲存與運輸技術，下列關於氨（NH3）的挑戰與對策何者正確？', options:['氨無法在常壓液態下儲存，運輸極為困難','氨完全無毒，是目前最安全的氫載體','需克服 NOx 洩漏與毒性問題，並發展高效率的氨裂解技術','氨主要用於製造鋰電池電解液'], answer:2},
+      {id:58, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'建立全城市尺度建築能源模型（UBEM）時，結合 LiDAR 與 GIS 資訊的主要優勢為何？', options:['可完全取代人工現場抄表','利用自動化演算法快速構建幾何與能源模型，降低建模成本與時間','僅能應用於單一棟建築','需要耗費大量人力測量'], answer:1},
+      {id:59, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'導入區塊鏈（Blockchain）或分散式帳本技術（DLT）於能源數據交換的主要目的為何？', options:['加快數據傳輸速度','降低資料庫儲存空間','提供不可竄改的特性，建立可追溯且具公信力的績效驗證基礎','讓所有數據全面公開下載'], answer:2},
+      {id:60, chapter:'第二章｜節能技術應用與能源管理', type:'single', question:'關於鈉離子電池（Na-ion）的發展，下列何者較符合文中所述？', options:['能量密度已大幅超越三元鋰電池','雖不依賴鋰與鈷，但目前能量密度仍低於鋰電池','預計 2025 年即可完全取代所有鋰電池市場','低溫性能極差，-30°C 時容量會歸零'], answer:1},
+      {id:61, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列何者不是再生能源的典型特性？', options:['來自自然界可循環利用的能量','使用後會永久枯竭','不依賴地質年代形成','生命週期碳排放量較低'], answer:1},
+      {id:62, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'《再生能源發展條例》將下列何項視為再生能源種類？', options:['天然氣','石油','太陽光電','核能'], answer:2},
+      {id:63, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列哪些發電類型在台灣較具「在地型自主供電 × 多用途複合使用」潛力？', options:['太陽光電、水力發電、地熱發電','天然氣發電','核能發電','火力發電'], answer:0},
+      {id:64, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列何者為太陽光電的主要優勢？', options:['不受日夜環境影響','發電穩定，不具間歇性','無需電網即可運轉','模組化技術成熟且安裝彈性高'], answer:3},
+      {id:65, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'台灣推動太陽光電開發策略，強調「屋頂優先」的原因為何？', options:['屋頂安裝成本高','可避免與農漁用地產生衝突','屋頂無需申請認證','只適合大型企業使用'], answer:1},
+      {id:66, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'目前台灣水力發電推動策略，強調以下列哪種型態為開發重點？', options:['與既有水利設施結合的小型水力發電','水庫式大型水力發電','高生態衝擊之轉水築壩型發電','抽蓄式水力發電'], answer:0},
+      {id:67, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列何者為地熱能的優點？', options:['完全不受地質條件影響','不需鑽井即可開發','可作為基載電力，全天候穩定供應','台灣地熱資源極少'], answer:2},
+      {id:68, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列何者為生質能的重要特性？', options:['發電過程完全不排放二氧化碳','兼具廢棄物處理與能源生產雙重效益','不需料源穩定供應','完全不需儲存'], answer:1},
+      {id:69, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列何者為台灣風力發電開發的重要社會爭議？', options:['高度空污管理問題','影響地熱資源開發','破壞水庫生態','海洋空間與漁業權益協調'], answer:3},
+      {id:70, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'海洋能現階段在全球發展的定位，下列何者正確？', options:['高度成熟的主力發電','商業化普及階段','技術驗證與早期示範階段','已停滯無法發展'], answer:2},
+      {id:71, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'我國於何年正式宣示 2050 淨零排放目標？', options:['2018','2019','2021','2023'], answer:2},
+      {id:72, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'能源轉型政策中的「展綠」主要指下列何者？', options:['擴大能源儲存','提升再生能源占比','降低電力使用','發展核能電廠'], answer:1},
+      {id:73, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'2022 年我國公布淨零路徑與戰略，使再生能源政策進入何種階段？', options:['設備研發階段','具量化目標與治理架構','放任市場自行發展','停止補助階段'], answer:1},
+      {id:74, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'2024 年提出的「二次能源轉型」強調的兩大主軸為何？', options:['多元綠能與深度節能','核能重啟與擴大火力發電','增加煤電','補貼燃氣與放寬碳排標準'], answer:0},
+      {id:75, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'截至 2025 年 9 月，台灣再生能源裝置容量主力為何？', options:['地熱與海洋能','水力與煤電','生質能發電','太陽光電與離岸風電'], answer:3},
+      {id:76, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'太陽光電推動方向為「屋頂優先 × 地面複合」，其中地面型光電以下列何者為主？', options:['漁電共生專區、不利耕作或受污染土地、掩埋場等','森林保護區','工廠與大樓屋頂','優良農地'], answer:0},
+      {id:77, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'離岸風電政策強調「公對公協力」，其目的何者正確？', options:['放寬漁業規範','減少民間投資','僅由政府獨資','提升國際融資與海域審查協作'], answer:3},
+      {id:78, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'地熱推動策略除技術外，特別要求重視哪個面向？', options:['僅由企業自行探勘','原住民族諮商與國家公園規範檢討','禁止國際合作','提高業者前期開發風險'], answer:1},
+      {id:79, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'我國推動再生能源之能源安全效益主要來自何者？', options:['增加國際燃料採購','關閉在地能源系統','降低儲能比例','減少對進口燃料的高度依賴'], answer:3},
+      {id:80, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'再生能源能強化台灣產業競爭力的原因，何者正確？', options:['綠電只影響住宅用電','國際完全不關心碳排議題','全球供應鏈要求綠電與低碳製造','產業不需用電'], answer:2},
+      {id:81, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'企業在綠電需求加速下，其角色由「電力消費者」逐漸轉變為何者？', options:['傳統電力輸出者','能源規劃參與者','火力發電投資人','用電削減監督者'], answer:1},
+      {id:82, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'企業取得綠電，可透過哪種方式？', options:['自設再生能源設備自發自用或向綠電市場採購綠電','自行使用柴油發電','僅能向國外購買','要求台電提供百分之百再生能源電力'], answer:0},
+      {id:83, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'自發自用模式下，企業同時扮演哪兩種角色？', options:['用電者與儲能供應者','燃料供應者與輸電者','發電者與用電者','電網投資者與審查者'], answer:2},
+      {id:84, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'當綠電供應大於企業用電需求時，依現行制度通常會如何處理？', options:['放棄電力不用','按餘購合約由公用售電業買回','企業必須自行裝設儲能否則受罰','企業可自行轉售給其他用戶'], answer:1},
+      {id:85, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'台電計費制度以每幾分鐘為一個結算時段？', options:['5 分鐘','55 分鐘','10 分鐘','15 分鐘'], answer:3},
+      {id:86, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'若企業透過轉供模式取得綠電，但夜間供應不足，則電力來源為何？', options:['全由綠電供應','由其他企業剩餘綠電補足','太陽光電搭配台電供電','無其他電力來源'], answer:2},
+      {id:87, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'企業選用太陽光電為來源之綠電時，主要限制為何？', options:['太陽光電屬不間歇能源','夜間無法發電，需搭配台電供應','必須與風電綁定購買','台灣太陽光電太少'], answer:1},
+      {id:88, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'評估企業綠電需求及採購額度時，應同時評估哪一項因素？', options:['台灣電價是否凍漲','公司產品價格','國際燃料價格','企業用電曲線與再生能源發電時段'], answer:3},
+      {id:89, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'為使綠電真正符合企業生產排程，企業應採取何種策略？', options:['全年平均綠電即可','僅依成本選便宜綠電','只需購買更多 T-REC','分析生產用電特性與逐時匹配綠電供應'], answer:3},
+      {id:90, chapter:'第三章｜再生能源與綠電導入', type:'single', question:'下列企業綠電使用模式的最終目的，何者正確？', options:['使電力來源透明、符合低碳要求並與用電行為相匹配','降低能源知識需求','完全脫離台灣電網','不用再支付電力使用費用'], answer:0}
+    ];
+
+    let sessionQuestions = [];
+    let currentIndex = 0;
+    let selectedAnswers = {};
+    let checkedQuestions = {};
+
+    const els = {
+      chapterFilter: document.getElementById('chapterFilter'),
+      questionCount: document.getElementById('questionCount'),
+      totalBank: document.getElementById('totalBank'),
+      sessionCount: document.getElementById('sessionCount'),
+      liveScore: document.getElementById('liveScore'),
+      liveProgress: document.getElementById('liveProgress'),
+      chapterBadge: document.getElementById('chapterBadge'),
+      questionIndex: document.getElementById('questionIndex'),
+      progressText: document.getElementById('progressText'),
+      progressBar: document.getElementById('progressBar'),
+      typeHint: document.getElementById('typeHint'),
+      questionText: document.getElementById('questionText'),
+      optionsWrap: document.getElementById('optionsWrap'),
+      resultBox: document.getElementById('resultBox'),
+      checkBtn: document.getElementById('checkBtn'),
+      prevBtn: document.getElementById('prevBtn'),
+      nextBtn: document.getElementById('nextBtn'),
+      generateBtn: document.getElementById('generateBtn'),
+      submitAllBtn: document.getElementById('submitAllBtn'),
+      summaryCard: document.getElementById('summaryCard'),
+      finalScore: document.getElementById('finalScore'),
+      finalText: document.getElementById('finalText'),
+      reviewList: document.getElementById('reviewList'),
+      restartBtn: document.getElementById('restartBtn'),
+      reviewBtn: document.getElementById('reviewBtn'),
+      backQuizBtn: document.getElementById('backQuizBtn'),
+      quizCard: document.getElementById('quizCard')
+    };
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function getFilteredBank() {
+      const chapter = els.chapterFilter.value;
+      if (chapter === 'all') return questionBank;
+      return questionBank.filter(q => q.chapter === chapter);
+    }
+
+    function generateSession() {
+      const bank = getFilteredBank();
+      const maxCount = bank.length;
+      const count = Math.max(5, Math.min(parseInt(els.questionCount.value || '20', 10), maxCount));
+      sessionQuestions = shuffle(bank).slice(0, count);
+      currentIndex = 0;
+      selectedAnswers = {};
+      checkedQuestions = {};
+      els.summaryCard.classList.remove('show');
+      els.quizCard.style.display = 'block';
+      els.sessionCount.textContent = String(count);
+      render();
+    }
+
+    function normalizeSelection(v) {
+      if (Array.isArray(v)) return [...v].sort((a,b)=>a-b);
+      return v;
+    }
+
+    function isCorrect(q, selected) {
+      if (q.type === 'multi') {
+        const a = normalizeSelection(selected || []);
+        const b = normalizeSelection(q.answer || []);
+        return JSON.stringify(a) === JSON.stringify(b);
+      }
+      return selected === q.answer;
+    }
+
+    function getScore() {
+      return sessionQuestions.reduce((sum, q) => sum + (isCorrect(q, selectedAnswers[q.id]) ? 1 : 0), 0);
+    }
+
+    function getCompleted() {
+      return sessionQuestions.filter(q => {
+        const val = selectedAnswers[q.id];
+        return q.type === 'multi' ? Array.isArray(val) && val.length > 0 : val !== undefined;
+      }).length;
+    }
+
+    function renderStats() {
+      const totalBank = getFilteredBank().length;
+      const score = getScore();
+      const done = getCompleted();
+      els.totalBank.textContent = String(totalBank);
+      els.liveScore.textContent = `${score}`;
+      els.liveProgress.textContent = `${Math.round(done / Math.max(sessionQuestions.length, 1) * 100)}%`;
+    }
+
+    function answerLabel(q) {
+      if (q.type === 'multi') {
+        return q.answer.map(i => `${String.fromCharCode(65+i)}. ${q.options[i]}`).join(' / ');
+      }
+      return `${String.fromCharCode(65 + q.answer)}. ${q.options[q.answer]}`;
+    }
+
+    function pickedLabel(q, picked) {
+      if (q.type === 'multi') {
+        if (!Array.isArray(picked) || !picked.length) return '未作答';
+        return picked.sort((a,b)=>a-b).map(i => `${String.fromCharCode(65+i)}. ${q.options[i]}`).join(' / ');
+      }
+      if (picked === undefined) return '未作答';
+      return `${String.fromCharCode(65 + picked)}. ${q.options[picked]}`;
+    }
+
+    function render() {
+      if (!sessionQuestions.length) return;
+      const q = sessionQuestions[currentIndex];
+      const done = getCompleted();
+      const picked = selectedAnswers[q.id];
+      const checked = !!checkedQuestions[q.id];
+      els.chapterBadge.textContent = q.chapter;
+      els.questionIndex.textContent = `第 ${currentIndex + 1} 題 / ${sessionQuestions.length}`;
+      els.progressText.textContent = `${done} / ${sessionQuestions.length}`;
+      els.progressBar.style.width = `${done / sessionQuestions.length * 100}%`;
+      els.typeHint.textContent = `題型：${q.type === 'multi' ? '複選題（可複選）' : '單選題'}`;
+      els.questionText.textContent = q.question;
+      els.optionsWrap.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const active = q.type === 'multi' ? Array.isArray(picked) && picked.includes(idx) : picked === idx;
+        const label = document.createElement('label');
+        label.className = 'option';
+        if (active) label.classList.add('active');
+        if (checked) {
+          const isAns = q.type === 'multi' ? q.answer.includes(idx) : q.answer === idx;
+          if (isAns) label.classList.add('correct');
+          if (active && !isAns) label.classList.add('wrong');
+        }
+        const inputType = q.type === 'multi' ? 'checkbox' : 'radio';
+        label.innerHTML = `<input type="${inputType}" ${active ? 'checked' : ''}/> <strong>${String.fromCharCode(65 + idx)}.</strong> ${opt}`;
+        label.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (q.type === 'multi') {
+            const arr = Array.isArray(selectedAnswers[q.id]) ? [...selectedAnswers[q.id]] : [];
+            const pos = arr.indexOf(idx);
+            if (pos >= 0) arr.splice(pos, 1); else arr.push(idx);
+            selectedAnswers[q.id] = arr;
+          } else {
+            selectedAnswers[q.id] = idx;
+          }
+          checkedQuestions[q.id] = false;
+          render();
+        });
+        els.optionsWrap.appendChild(label);
+      });
+
+      if (checked) {
+        const ok = isCorrect(q, picked);
+        els.resultBox.className = `result show ${ok ? 'ok' : 'ng'}`;
+        els.resultBox.innerHTML = `<strong>${ok ? '答對了' : '答錯了'}</strong><br>正確答案：${answerLabel(q)}`;
+      } else {
+        els.resultBox.className = 'result';
+        els.resultBox.innerHTML = '';
+      }
+
+      const isLastQuestion = currentIndex === sessionQuestions.length - 1;
+      document.getElementById('footerPanel').style.display = isLastQuestion ? 'grid' : 'none';
+      els.nextBtn.textContent = isLastQuestion ? '完成本次作答' : '下一題';
+      renderStats();
+    }
+
+    function hasAnswer(q) {
+      const picked = selectedAnswers[q.id];
+      return q.type === 'multi' ? Array.isArray(picked) && picked.length > 0 : picked !== undefined;
+    }
+
+    function checkAnswer() {
+      const q = sessionQuestions[currentIndex];
+      if (!hasAnswer(q)) {
+        alert('請先選擇答案。');
+        return;
+      }
+      checkedQuestions[q.id] = true;
+      render();
+    }
+
+    function showSummary(onlyWrong = false) {
+      const total = sessionQuestions.length;
+      const score = getScore();
+      const wrongItems = sessionQuestions.filter(q => !isCorrect(q, selectedAnswers[q.id]));
+      const reviewData = onlyWrong ? wrongItems : sessionQuestions;
+      els.quizCard.style.display = 'none';
+      els.summaryCard.classList.add('show');
+      document.getElementById('footerPanel').style.display = 'none';
+      els.finalScore.textContent = `${score} / ${total}`;
+      els.finalText.textContent = `答對 ${score} 題，答錯 ${total - score} 題，正確率 ${Math.round(score / total * 100)}%。`;
+      els.reviewList.innerHTML = '';
+      reviewData.forEach(q => {
+        const ok = isCorrect(q, selectedAnswers[q.id]);
+        const item = document.createElement('div');
+        item.className = `review-item ${ok ? 'ok' : 'ng'}`;
+        item.innerHTML = `
+          <div><strong>${q.chapter}</strong></div>
+          <div style="margin:8px 0; line-height:1.7;">${q.question}</div>
+          <div class="mini">你的答案：${pickedLabel(q, selectedAnswers[q.id])}</div>
+          <div class="mini">正確答案：${answerLabel(q)}</div>
+        `;
+        els.reviewList.appendChild(item);
+      });
+    }
+
+    els.checkBtn.addEventListener('click', checkAnswer);
+    els.prevBtn.addEventListener('click', () => { if (currentIndex > 0) { currentIndex -= 1; render(); } });
+    els.nextBtn.addEventListener('click', () => { if (currentIndex < sessionQuestions.length - 1) { currentIndex += 1; render(); } else { showSummary(false); } });
+    els.generateBtn.addEventListener('click', generateSession);
+    els.submitAllBtn.addEventListener('click', () => showSummary(false));
+    els.restartBtn.addEventListener('click', generateSession);
+    els.reviewBtn.addEventListener('click', () => showSummary(true));
+    els.backQuizBtn.addEventListener('click', () => { els.summaryCard.classList.remove('show'); els.quizCard.style.display = 'block'; render(); });
+    els.chapterFilter.addEventListener('change', generateSession);
+    els.questionCount.addEventListener('change', generateSession);
+
+    generateSession();
+  </script>
+</body>
+</html>
